@@ -1,0 +1,39 @@
+{# Load the tag library #}
+{% load staticfiles %}
+{% load bootstrap3 %}
+
+{# Load CSS files #}
+{% bootstrap_css %}
+
+
+<html>
+<head>
+    <style>
+        .margin-right-15 {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <a class="navbar-brand" href="#">MyTweets</a>
+        <p class="navbar-text navbar-right margin-right-15">User Profile Page</p>
+    </nav>
+
+    <div class="container" style="margin-top: 70px;">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <p class="navbar-text navbar-right margin-right-15">Footer</p>
+    </nav>
+
+{# Load JS files #}
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+{% bootstrap_javascript %}
+
+</body>
+</html>
