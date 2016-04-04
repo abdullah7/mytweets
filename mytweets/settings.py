@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'jquery',
 
     # Local Apps
+    'bookmarks',
     'user_profile',
     'tweets',
 )
