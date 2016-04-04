@@ -2,9 +2,6 @@
 {% load staticfiles %}
 
 {% block content %}
-{% block title %}Search Bookmarks{% endblock %}
-{% block head %}Search Bookmarks{% endblock %}
-
 <div class="row clearfix">
     <div class="col-md-6 col-md-offset-3 column">
         <form id="search-form" action="" method="post">
@@ -13,7 +10,7 @@
                 {{ search.query.errors }}
                 {{ search.query }}
                 <span class="input-group-btn">
-                    <button class="btn btn-search" type="submit">Search</button>
+                    <button class="btn btn-default" type="submit">Search</button>
                 </span>
             </div> <!-- /input-group -->
         </form>
