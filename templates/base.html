@@ -13,6 +13,10 @@
             margin-right: 15px;
         }
     </style>
+
+    {% block css %}
+    {% endblock %}
+
 </head>
 
 <body>
@@ -34,6 +38,9 @@
 {# Load JS files #}
 <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
 {% bootstrap_javascript %}
+
+    {% block js %}
+    {% endblock %}
 
 </body>
 </html>

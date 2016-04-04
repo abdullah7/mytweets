@@ -1,6 +1,6 @@
 from django.conf.urls import include, url
 from django.contrib import admin
-from tweets.views import Index, Profile, PostTweet, HashTagCloud
+from tweets.views import Index, Profile, PostTweet, HashTagCloud, Search
 
 admin.autodiscover()
 
@@ -18,6 +18,9 @@ urlpatterns = [
 
     # /hashtag/
     url(r'^hashtag/(\w+)/$', HashTagCloud.as_view()),
+
+    # /search/
+    url(r'^search/$', Search.as_view()),
 
     # /admin/
     url(r'^admin/', include(admin.site.urls)),
